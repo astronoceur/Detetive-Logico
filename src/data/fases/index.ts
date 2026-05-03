@@ -52,14 +52,17 @@ export interface FaseData {
   }
 }
 
-// Fases serão importadas dinamicamente conforme forem adicionadas
-// Exemplo de uso:
-//   const faseData = await import(`./fase${String(id).padStart(2,'0')}.json`)
+// Vite resolve esse glob em build-time, criando um chunk separado por fase.
+// Funciona tanto em dev quanto em produção (sem requisições HTTP soltas).
+const fasesModulos = import.meta.glob<{ default: FaseData }>('./*.json')
 
 export async function carregarFase(id: number): Promise<FaseData | null> {
+  const chave = `./${String(id).padStart(2, '0')}.json`
+  const carregar = fasesModulos[chave]
+  if (!carregar) return null
   try {
-    const modulo = await import(/* @vite-ignore */ `./${String(id).padStart(2, '0')}.json`)
-    return modulo.default as FaseData
+    const modulo = await carregar()
+    return modulo.default
   } catch {
     return null
   }
