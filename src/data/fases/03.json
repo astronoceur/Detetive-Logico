@@ -1,0 +1,89 @@
+{
+  "id": 3,
+  "titulo": "Conjunção",
+  "conceito": {
+    "titulo": "Conjunção (∧)",
+    "texto": "A conjunção p ∧ q é verdadeira somente quando ambas as proposições p e q são verdadeiras. Basta uma ser falsa para que toda a conjunção seja falsa. Quando um suspeito afirma duas coisas ao mesmo tempo, provar que uma é mentira compromete toda a alegação.",
+    "pilarPC": "Reconhecimento de Padrões",
+    "pilarDescricao": "identificar que um único valor falso entre os operandos derruba toda uma conjunção"
+  },
+  "personagem": "helena_duarte",
+  "cenario": "sala_reunioes",
+  "narracaoEntrada": "A sala de reuniões está impecável. Helena Duarte está sentada à cabeceira da mesa com um laptop aberto exibindo apresentações corporativas. Ela olha para cima assim que o detetive entra — com a expressão de quem esperava essa visita.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Detetive. Eu já sabia que você viria. Estava aqui a noite toda — pode verificar com quem quiser."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "O que a senhora estava fazendo entre 22h e meia-noite?"
+      },
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Revisando os slides para a apresentação do Atlas. E respondendo e-mails urgentes de investidores. Dupla tarefa — é o que o cargo exige."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Respondendo e-mails, a senhora disse. Pode me mostrar o histórico de envios dessa noite?"
+      },
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Claro. Deixa eu encontrar... Tenho muitas abas abertas. Mas estava respondendo, com certeza."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Os logs do servidor de e-mail mostram zero atividade no seu endereço entre 22h10 e 23h00."
+      },
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Deve ser algum erro técnico. Sistemas falham. Acontece com qualquer plataforma."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Os mesmos logs registraram corretamente todos os outros usuários ativos nessa janela."
+      },
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Então... talvez eu tenha confundido com outra noite. Estava exausta. Mas eu estava aqui nessa sala, isso é fato."
+      }
+    ]
+  },
+  "traducaoLogica": "Definimos: p = 'Helena estava revisando slides entre 22h10 e 23h00'; q = 'Helena estava respondendo e-mails entre 22h10 e 23h00'. A afirmação combinada de Helena é p ∧ q. Os logs provam que q = F — nenhum e-mail foi enviado. Como a conjunção exige que ambas sejam V, o resultado de p ∧ q é F, independentemente do valor de p.",
+  "desafio": {
+    "enunciado": "Helena afirma que estava revisando slides (p) E respondendo e-mails (q) ao mesmo tempo. Analise a tabela-verdade da conjunção e responda à pergunta.",
+    "pergunta": "Sabendo que q = F, qual é o valor lógico da afirmação completa de Helena (p ∧ q)?",
+    "tipo": "tabela_verdade",
+    "estrutura": {
+      "colunas": ["p", "q", "p ∧ q"],
+      "linhas": [
+        ["V", "V", "V"],
+        ["V", "F", "F"],
+        ["F", "V", "F"],
+        ["F", "F", "F"]
+      ],
+      "respostaCorreta": ["V", "F", "F"]
+    },
+    "respostaFinal": "F"
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Perfeito.",
+      "mensagem": "A conjunção é cruel: basta um elo da corrente quebrar para tudo cair. Helena pode realmente ter revisado slides, mas como ela não estava respondendo e-mails, sua afirmação combinada é falsa.",
+      "pistaLiberada": "Helena minte sobre estar respondendo e-mails durante o intervalo do crime — há uma janela de cerca de 50 minutos sem registro de sua atividade."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Volte à tabela-verdade. Encontre a linha em que q = F e veja o resultado de p ∧ q. Na conjunção, F 'contamina' o resultado — qualquer F entre os operandos torna o todo F."
+    }
+  },
+  "pista": {
+    "id": "pista_03",
+    "categoria": "horarios",
+    "titulo": "E-mails Não Enviados",
+    "descricao": "Helena minte sobre estar respondendo e-mails durante o intervalo do crime — há uma janela de cerca de 50 minutos sem registro de sua atividade."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": 6,
+  "titulo": "Bicondicional",
+  "conceito": {
+    "titulo": "Bicondicional (↔)",
+    "texto": "A bicondicional p ↔ q é verdadeira quando p e q têm o mesmo valor lógico (ambas V ou ambas F) e falsa quando têm valores diferentes. Em linguagem natural, equivale a 'p se, e somente se, q'. É comum em definições e relações de equivalência rigorosa.",
+    "pilarPC": "Abstração",
+    "pilarDescricao": "perceber que duas afirmações estão amarradas: uma só vale exatamente nas mesmas circunstâncias da outra"
+  },
+  "personagem": "renata_mota",
+  "cenario": "laboratorio",
+  "narracaoEntrada": "Bancadas de computadores de alto desempenho. Quadro branco com diagramas de circuitos. Um armário de segurança aberto, vazio. Renata Mota anda de um lado para o outro, mexendo no celular. Para imediatamente ao perceber a chegada do detetive.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Renata Mota",
+        "fala": "Detetive, finalmente. Eu desenvolvi o Atlas. Ninguém aqui se importa com ele tanto quanto eu. Não faria sentido eu roubar meu próprio projeto."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "A senhora tinha acesso direto ao Módulo Atlas?"
+      },
+      {
+        "personagem": "Renata Mota",
+        "fala": "Eu acessava o Atlas se, e somente se, o sistema biométrico me autorizasse. Ou seja, sempre que eu acessava, havia registro biométrico, e sempre que havia registro biométrico do meu dedo, era porque eu acessei."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Os logs mostram que houve um acesso biométrico com o seu dedo às 22h38, dois minutos antes do blackout."
+      },
+      {
+        "personagem": "Renata Mota",
+        "fala": "Isso é impossível. Eu estava no banheiro às 22h38."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Pela sua própria regra, se houve registro, então a senhora acessou. E houve registro."
+      },
+      {
+        "personagem": "Renata Mota",
+        "fala": "Espera... talvez alguém tenha clonado meu dedo. Ou usado o sistema antes do blackout começar de propósito."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Talvez. Mas a bicondicional que a senhora mesma estabeleceu agora a coloca em contradição com seu álibi."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Renata acessou o Módulo Atlas às 22h38'. q = 'Houve registro biométrico de Renata às 22h38'. Afirmação de Renata: p ↔ q. Os logs confirmam q = V. Pela bicondicional, p deve ser V. Mas Renata afirma p = F. Contradição.",
+  "desafio": {
+    "enunciado": "Monte a tabela-verdade da bicondicional (p ↔ q) clicando em cada célula para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "Sabendo que q = V (houve registro biométrico), qual deve ser o valor de p para que a bicondicional p ↔ q seja V?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "p ↔ q"],
+      "linhas": [
+        ["V", "V", "V"],
+        ["V", "F", "F"],
+        ["F", "V", "F"],
+        ["F", "F", "V"]
+      ],
+      "respostaCorreta": ["V", "V", "V", "F"]
+    },
+    "respostaFinal": "V",
+    "opcoesPerguntaFinal": ["V", "F"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Exato.",
+      "mensagem": "A bicondicional amarra os dois lados. Não há como aceitar q = V e p = F sem violar a regra que ela mesma estabeleceu. Renata caiu na própria definição: ou ela acessou o sistema, ou sua regra é mentira.",
+      "pistaLiberada": "O registro biométrico de Renata às 22h38 é incompatível com o álibi do banheiro. Esta é a primeira inconsistência forte do caso."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "A bicondicional só é V quando os dois lados têm o mesmo valor. Se q = V, qual valor de p faz p ↔ q = V?"
+    }
+  },
+  "pista": {
+    "id": "pista_06",
+    "categoria": "contradicoes",
+    "titulo": "Registro Biométrico Incompatível",
+    "descricao": "O registro biométrico de Renata às 22h38 é incompatível com o álibi do banheiro. Esta é a primeira inconsistência forte do caso."
+  }
+}

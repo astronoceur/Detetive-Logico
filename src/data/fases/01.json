@@ -1,0 +1,89 @@
+{
+  "id": 1,
+  "titulo": "Proposição",
+  "conceito": {
+    "titulo": "O que é uma Proposição",
+    "texto": "Uma proposição é toda sentença declarativa à qual se pode atribuir, sem ambiguidade, exatamente um valor lógico: verdadeiro (V) ou falso (F). Frases interrogativas, exclamativas, imperativas e opiniões subjetivas não são proposições, pois não admitem essa classificação binária.",
+    "pilarPC": "Decomposição",
+    "pilarDescricao": "quebrar uma fala longa em afirmações atômicas, cada uma classificável como V ou F"
+  },
+  "personagem": "clara_viana",
+  "cenario": "recepcao",
+  "narracaoEntrada": "A recepção está em penumbra. Atrás do balcão, Clara Viana segura uma caneca de chá com as duas mãos. O livro de ocorrências está aberto. Uma câmera apontada para a catraca pisca uma luz vermelha. Clara levanta a vista assim que ouve passos.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Clara Viana",
+        "fala": "Boa noite, detetive. Já estava esperando. O senhor Marcos Teles me avisou que o senhor viria."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Boa noite, Clara. Preciso que me diga, com calma, o que viu ontem entre 22h e meia-noite."
+      },
+      {
+        "personagem": "Clara Viana",
+        "fala": "Posso. Eu estava na recepção a noite toda. A senhora Helena passou pela catraca às 22h05. O Marcos Teles entrou no monitoramento às 21h50. Diego Sampaio estava no corredor técnico desde as 21h. Renata Mota chegou ao laboratório às 21h40. E o Sr. Eduardo Leal entrou na sala de auditoria às 22h15."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Alguém saiu durante a noite?"
+      },
+      {
+        "personagem": "Clara Viana",
+        "fala": "Diego saiu para tomar café às 22h30. Voltou às 22h50. Foi a única movimentação que registrei no livro."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "E o alarme? A senhora ouviu alguma coisa estranha?"
+      },
+      {
+        "personagem": "Clara Viana",
+        "fala": "O alarme não tocou. Mas a luz da câmera da catraca apagou por uns dois minutos, lá pelas 22h40. Não é normal. Anotei no livro."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Você tem certeza dos horários?"
+      },
+      {
+        "personagem": "Clara Viana",
+        "fala": "Tenho. Anoto tudo no momento. É política da empresa. Dá para conferir no livro de ocorrências."
+      }
+    ]
+  },
+  "traducaoLogica": "Cada fala de Clara pode ser decomposta em afirmações atômicas. Algumas admitem valor V ou F definido — essas são proposições. Perguntas como 'Posso?' e incertezas como 'Talvez Diego tenha mentido' não têm valor lógico determinado, portanto não são proposições.",
+  "desafio": {
+    "enunciado": "Dentre as cinco frases extraídas do depoimento de Clara, identifique quantas são proposições lógicas válidas.",
+    "tipo": "tabela_classificacao",
+    "estrutura": {
+      "colunas": ["#", "Frase", "É proposição?"],
+      "linhas": [
+        ["1", "Helena passou pela catraca às 22h05.", "Sim (V)"],
+        ["2", "Posso?", "Não — pergunta"],
+        ["3", "O alarme não tocou.", "Sim (V)"],
+        ["4", "Talvez Diego tenha mentido sobre o café.", "Não — incerteza"],
+        ["5", "A luz da câmera da catraca apagou por dois minutos.", "Sim (V)"]
+      ],
+      "respostaCorreta": ["Sim (V)", "Não — pergunta", "Sim (V)", "Não — incerteza", "Sim (V)"]
+    },
+    "respostaFinal": 3
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Excelente, detetive.",
+      "mensagem": "Você separou os fatos do ruído. Apenas frases declarativas com valor V/F definido contam como proposições. Perguntas e suposições com 'talvez' ficam de fora.",
+      "pistaLiberada": "A câmera da catraca apagou por aproximadamente dois minutos por volta das 22h40 — exatamente o intervalo em que o alarme foi desativado. Confirmação cruzada pelo livro de ocorrências de Clara."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Uma proposição precisa ser uma afirmação que se pode classificar como V ou F. Pergunte-se: 'esta frase pode ser verdadeira ou falsa?' Se a resposta for 'depende' ou 'é só uma pergunta', não é proposição."
+    }
+  },
+  "pista": {
+    "id": "pista_01",
+    "categoria": "falhas_sistema",
+    "titulo": "Câmera da Catraca",
+    "descricao": "A câmera da catraca apagou por aproximadamente dois minutos por volta das 22h40 — exatamente o intervalo em que o alarme foi desativado. Confirmação cruzada pelo livro de ocorrências de Clara."
+  }
+}

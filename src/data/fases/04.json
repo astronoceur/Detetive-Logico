@@ -1,0 +1,89 @@
+{
+  "id": 4,
+  "titulo": "Disjunção",
+  "conceito": {
+    "titulo": "Disjunção (∨)",
+    "texto": "A disjunção p ∨ q é falsa somente quando ambas as proposições são falsas. Basta uma ser verdadeira para que a disjunção inteira seja verdadeira. Equivale ao 'ou' inclusivo da linguagem natural.",
+    "pilarPC": "Reconhecimento de Padrões",
+    "pilarDescricao": "perceber que 'pelo menos uma alternativa' é um padrão recorrente em álibis fracos"
+  },
+  "personagem": "diego_sampaio",
+  "cenario": "corredor_tecnico",
+  "narracaoEntrada": "O corredor técnico cheira a metal e poeira. A caixa de ferramentas está aberta no chão. Diego Sampaio está sentado em um banquinho, mexendo no celular. Levanta-se rapidamente quando o detetive entra.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "Eai, detetive! Já vou avisando: eu não tenho nada a ver com isso, juro."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Onde você estava às 22h40?"
+      },
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "Olha, ou eu estava no corredor técnico OU eu estava na máquina de café. Uma das duas, com certeza."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "E qual das duas?"
+      },
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "Aaah, isso eu não me lembro exatamente. Mas com certeza foi uma das duas."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Clara, da recepção, registrou no livro que você saiu para tomar café às 22h30 e voltou às 22h50."
+      },
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "Pois é, então tá explicado. Eu tava na máquina de café."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "A máquina de café fica na ala administrativa, no andar de cima. Você passa em frente ao laboratório do Atlas para chegar lá."
+      },
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "Passo. Mas não entrei. Juro."
+      }
+    ]
+  },
+  "traducaoLogica": "Definimos: p = 'Diego estava no corredor técnico às 22h40'; q = 'Diego estava na máquina de café às 22h40'. A afirmação de Diego é p ∨ q — pelo menos uma das alternativas é verdadeira. A disjunção não nos diz qual; apenas garante que ao menos uma ocorreu.",
+  "desafio": {
+    "enunciado": "Monte a tabela-verdade da disjunção (p ∨ q) clicando em cada célula para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "Pela disjunção sozinha, conseguimos saber onde Diego estava exatamente?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "p ∨ q"],
+      "linhas": [
+        ["V", "V", "V"],
+        ["V", "F", "V"],
+        ["F", "V", "V"],
+        ["F", "F", "F"]
+      ],
+      "respostaCorreta": ["V", "V", "V", "F"]
+    },
+    "respostaFinal": "Não"
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Você captou a essência.",
+      "mensagem": "A disjunção 'p ou q' não compromete o falante a escolher. Essa é uma estratégia comum em álibis fracos — manter a porta aberta para duas versões.",
+      "pistaLiberada": "Para chegar à máquina de café, Diego precisa passar em frente ao laboratório do Atlas. Ele esteve na rota crítica entre 22h30 e 22h50."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "A disjunção é satisfeita por uma única proposição V. Ela não exige que ambas sejam V, e também não nos diz qual é verdadeira. Pense em 'pelo menos uma'."
+    }
+  },
+  "pista": {
+    "id": "pista_04",
+    "categoria": "acessos",
+    "titulo": "Rota Crítica de Diego",
+    "descricao": "Para chegar à máquina de café, Diego precisa passar em frente ao laboratório do Atlas. Ele esteve na rota crítica entre 22h30 e 22h50."
+  }
+}

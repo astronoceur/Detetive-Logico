@@ -1,0 +1,79 @@
+{
+  "id": 11,
+  "titulo": "Associatividade",
+  "conceito": {
+    "titulo": "Associatividade",
+    "texto": "Conjunção e disjunção são associativas: (p ∧ q) ∧ r ≡ p ∧ (q ∧ r) e (p ∨ q) ∨ r ≡ p ∨ (q ∨ r). Isso significa que, em uma sequência de três ou mais conjunções (ou disjunções), os parênteses podem ser remanejados sem alterar o valor lógico — e, por isso, podem até ser omitidos.",
+    "pilarPC": "Algoritmos",
+    "pilarDescricao": "simplificar expressões ao não precisar guardar agrupamentos desnecessários"
+  },
+  "personagem": "diego_sampaio",
+  "cenario": "corredor_tecnico",
+  "narracaoEntrada": "Diego está mais sério agora. A caixa de ferramentas está fechada. Ele abre um caderno de manutenção e aponta três entradas.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "Detetive, eu fiz três coisas naquela noite, em sequência: trocar a lâmpada do corredor, conferir o painel elétrico e tomar café."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Então, em conjunção: 'troquei a lâmpada, conferi o painel e tomei café'."
+      },
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "Isso. Não importa se eu digo 'lâmpada e painel, depois café' ou 'lâmpada, depois painel e café' — são as três coisas juntas."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Mas note que conferir o painel elétrico inclui acesso à área onde o alarme da empresa pode ser desativado por queda de tensão."
+      },
+      {
+        "personagem": "Diego Sampaio",
+        "fala": "...pode. Mas eu só conferi. Não desativei nada."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Diego trocou a lâmpada'. q = 'Diego conferiu o painel elétrico'. r = 'Diego tomou café'. Diego afirma p ∧ q ∧ r — onde os parênteses podem ser livremente reagrupados, pois (p ∧ q) ∧ r ≡ p ∧ (q ∧ r).",
+  "desafio": {
+    "enunciado": "As colunas p, q e r já estão preenchidas. Calcule p ∧ q, q ∧ r, (p ∧ q) ∧ r e p ∧ (q ∧ r) clicando em cada célula vazia para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "As duas colunas finais — (p ∧ q) ∧ r e p ∧ (q ∧ r) — são idênticas? Isso confirma a associatividade da conjunção?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "r", "p ∧ q", "q ∧ r", "(p ∧ q) ∧ r", "p ∧ (q ∧ r)"],
+      "linhas": [
+        ["V", "V", "V", "V", "V", "V", "V"],
+        ["V", "V", "F", "V", "F", "F", "F"],
+        ["V", "F", "V", "F", "F", "F", "F"],
+        ["V", "F", "F", "F", "F", "F", "F"],
+        ["F", "V", "V", "F", "V", "F", "F"],
+        ["F", "V", "F", "F", "F", "F", "F"],
+        ["F", "F", "V", "F", "F", "F", "F"],
+        ["F", "F", "F", "F", "F", "F", "F"]
+      ],
+      "respostaCorreta": ["V", "F", "F", "F", "F", "F", "F", "F"],
+      "colunasPreenchidas": 3
+    },
+    "respostaFinal": "Sim",
+    "opcoesPerguntaFinal": ["Sim", "Não"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Associatividade confirmada.",
+      "mensagem": "Tanto faz como agrupamos: o resultado lógico é o mesmo. Diego afirma três coisas com conjunção. Para que toda a afirmação seja V, todas as três precisam ser V.",
+      "pistaLiberada": "Diego confirma ter passado pelo painel elétrico durante a janela do crime. Ele é o suspeito com acesso técnico mais direto à infraestrutura que poderia desligar o alarme."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Linha por linha: calcule (p ∧ q) primeiro, depois (...) ∧ r. Em outra coluna, calcule (q ∧ r), depois p ∧ (...). Se as colunas finais coincidem em todas as oito linhas, há associatividade."
+    }
+  },
+  "pista": {
+    "id": "pista_11",
+    "categoria": "acessos",
+    "titulo": "Diego no Painel Elétrico",
+    "descricao": "Diego confirma ter passado pelo painel elétrico durante a janela do crime. Ele é o suspeito com acesso técnico mais direto à infraestrutura que poderia desligar o alarme."
+  }
+}

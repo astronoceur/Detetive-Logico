@@ -1,0 +1,86 @@
+{
+  "id": 5,
+  "titulo": "Condicional",
+  "conceito": {
+    "titulo": "Condicional (→)",
+    "texto": "A condicional p → q lê-se 'se p, então q'. Ela é falsa apenas em um cenário: quando p é V e q é F. Em todos os outros casos é V — inclusive quando p é F (a chamada 'verdade vacuosa'). Em uma investigação, a condicional aparece em promessas, regras de acesso e justificativas.",
+    "pilarPC": "Abstração e Algoritmos",
+    "pilarDescricao": "formalizar regras de negócio ('se A, então B') e testar se foram cumpridas"
+  },
+  "personagem": "eduardo_leal",
+  "cenario": "sala_auditoria",
+  "narracaoEntrada": "Sala bem iluminada. Eduardo Leal está sentado, casaco dobrado sobre a cadeira ao lado, notebook fechado. Sobre a mesa, uma pasta executiva de couro e a agenda impressa do dia. Ele se levanta, oferece a mão e sorri com calma estudada.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Detetive, é um prazer. Estou inteiramente à disposição."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Sr. Leal, o senhor teve acesso ao laboratório do Atlas em algum momento?"
+      },
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Veja: se eu tivesse tido acesso ao laboratório, então isso constaria nos registros do meu crachá. E meu crachá não registra essa entrada."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Conveniente."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "O sistema de crachás passou por uma falha das 22h40 às 22h44. Coincidiu com o blackout do monitoramento."
+      },
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Interessante. Então, durante esses quatro minutos, qualquer entrada não teria sido registrada."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Exato. A regra 'se entrei, então fica registrado' depende do sistema funcionar."
+      },
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Acho que estamos falando de uma janela em que minha condicional perde validade. Mas não significa que eu tenha entrado."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Eduardo entrou no laboratório às 22h40'. q = 'O crachá de Eduardo registrou a entrada'. Afirmação de Eduardo: p → q. Sabemos que q é F (não há registro). Para a condicional ser V, precisaríamos de p = F. Mas o argumento de Eduardo só funciona se assumirmos p = F — exatamente o que ele quer provar. A ausência de registro não prova nada quando o sistema esteve fora do ar.",
+  "desafio": {
+    "enunciado": "Monte a tabela-verdade da condicional (p → q) clicando em cada célula para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "Em qual única linha da tabela a condicional p → q é falsa?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "p → q"],
+      "linhas": [
+        ["V", "V", "V"],
+        ["V", "F", "F"],
+        ["F", "V", "V"],
+        ["F", "F", "V"]
+      ],
+      "respostaCorreta": ["V", "V", "V", "F"]
+    },
+    "respostaFinal": "Linha 2",
+    "opcoesPerguntaFinal": ["Linha 1", "Linha 2", "Linha 3", "Linha 4"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Você identificou o ponto cego.",
+      "mensagem": "A condicional só é F quando o antecedente é V e o consequente é F. Como o sistema esteve fora do ar, a ausência de registro (q = F) não prova que p = F.",
+      "pistaLiberada": "Durante o blackout do crachá (22h40 a 22h44), qualquer suspeito poderia ter entrado em qualquer sala sem deixar log. Eduardo sabia disso."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Olhe atentamente a tabela: a condicional só falha em uma única linha. Pense: 'Se eu te disse, então você ouviu.' Essa promessa é quebrada apenas quando eu disse (V) e você não ouviu (F)."
+    }
+  },
+  "pista": {
+    "id": "pista_05",
+    "categoria": "falhas_sistema",
+    "titulo": "Blackout do Crachá",
+    "descricao": "Durante o blackout do crachá (22h40 a 22h44), qualquer suspeito poderia ter entrado em qualquer sala sem deixar log. Eduardo sabia disso."
+  }
+}

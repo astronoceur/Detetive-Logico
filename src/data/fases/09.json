@@ -1,0 +1,78 @@
+{
+  "id": 9,
+  "titulo": "Equivalências",
+  "conceito": {
+    "titulo": "Equivalências Tautológicas (≡)",
+    "texto": "Duas proposições compostas são logicamente equivalentes (P ≡ Q) quando P ↔ Q é uma tautologia — ou seja, quando possuem exatamente a mesma tabela-verdade. Equivalências permitem reescrever uma afirmação em outra forma logicamente idêntica. A equivalência clássica é p → q ≡ ¬p ∨ q: a condicional pode ser reescrita como uma disjunção.",
+    "pilarPC": "Abstração e Algoritmos",
+    "pilarDescricao": "transformar afirmações em formas canônicas para comparar e simplificar"
+  },
+  "personagem": "helena_duarte",
+  "cenario": "sala_reunioes",
+  "narracaoEntrada": "Helena recebe o detetive na sala de reuniões, agora mais escura. As persianas foram fechadas. Os copos de café foram retirados.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Detetive, gostaria de reformular minha declaração."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Pode falar."
+      },
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Antes eu disse: 'se eu estava revisando os slides, então estava respondendo e-mails'. Mas é equivalente dizer: 'eu não estava revisando os slides, ou eu estava respondendo e-mails'."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "É a equivalência clássica entre condicional e disjunção. p → q ≡ ¬p ∨ q. Mas isso não muda os fatos: q já foi confirmada como falsa pelos logs."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Helena Duarte",
+        "fala": "Eu compreendi. Reformular não muda valor lógico. Estou tentando colaborar."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Está. E é justamente por isso que vou listar as duas formas e mostrar à senhora que elas dão a mesma tabela."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Helena estava revisando slides'. q = 'Helena estava respondendo e-mails'. As duas formas são p → q e ¬p ∨ q. Se as colunas forem idênticas em todas as linhas, as expressões são logicamente equivalentes.",
+  "desafio": {
+    "enunciado": "Monte a tabela-verdade completa de p → q e ¬p ∨ q clicando em cada célula para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "As colunas de p → q e ¬p ∨ q são iguais em todas as linhas? Logo, são equivalentes?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "¬p", "p → q", "¬p ∨ q"],
+      "linhas": [
+        ["V", "V", "F", "V", "V"],
+        ["V", "F", "F", "F", "F"],
+        ["F", "V", "V", "V", "V"],
+        ["F", "F", "V", "V", "V"]
+      ],
+      "respostaCorreta": ["V", "F", "V", "V"]
+    },
+    "respostaFinal": "Sim",
+    "opcoesPerguntaFinal": ["Sim", "Não"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Equivalência confirmada.",
+      "mensagem": "Você confirmou a equivalência fundamental p → q ≡ ¬p ∨ q. Helena tentou reformular sua afirmação, mas o conteúdo lógico permanece — e a contradição com os logs também.",
+      "pistaLiberada": "Helena agora reconhece, indiretamente, que sua afirmação inicial estava incompleta. A janela de cerca de 50 minutos sem atividade real ainda precisa ser explicada."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Construa as duas tabelas separadamente e compare linha a linha. Em cada linha, calcule ¬p, depois p → q, depois ¬p ∨ q."
+    }
+  },
+  "pista": {
+    "id": "pista_09",
+    "categoria": "contradicoes",
+    "titulo": "Janela Inexplicada de Helena",
+    "descricao": "Helena agora reconhece, indiretamente, que sua afirmação inicial estava incompleta. A janela de cerca de 50 minutos sem atividade real ainda precisa ser explicada."
+  }
+}

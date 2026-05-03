@@ -1,0 +1,75 @@
+{
+  "id": 10,
+  "titulo": "Comutatividade",
+  "conceito": {
+    "titulo": "Comutatividade",
+    "texto": "A conjunção e a disjunção são comutativas: p ∧ q ≡ q ∧ p e p ∨ q ≡ q ∨ p. A ordem em que duas proposições aparecem ligadas por ∧ ou ∨ não altera o valor lógico do todo. Isso é importante para comparar depoimentos que dizem essencialmente a mesma coisa em ordens diferentes.",
+    "pilarPC": "Reconhecimento de Padrões",
+    "pilarDescricao": "perceber estruturas equivalentes mesmo quando expressas em ordens distintas"
+  },
+  "personagem": "clara_viana",
+  "cenario": "recepcao",
+  "narracaoEntrada": "Clara abre o livro de ocorrências em uma página marcada. Há um post-it com sua letra arredondada: 'verificar saída Diego x luz da câmera'.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Clara Viana",
+        "fala": "Detetive, releu o livro? Eu anotei: 'Diego saiu para café e a câmera apagou'."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "E também: 'a câmera apagou e Diego saiu para café'. As duas frases dizem a mesma coisa, certo?"
+      },
+      {
+        "personagem": "Clara Viana",
+        "fala": "Exatamente. A ordem não importa para mim. Mas a sequência temporal me chama atenção: a luz apagou EXATAMENTE depois que Diego saiu pelo corredor."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Em lógica, p ∧ q e q ∧ p têm o mesmo valor. Mas no mundo real, a ordem temporal pode importar. O que vem antes pode ser causa do que vem depois."
+      },
+      {
+        "personagem": "Clara Viana",
+        "fala": "Eu entendo. Logicamente é a mesma coisa. Investigativamente, é uma pista."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Diego saiu para o café'. q = 'A câmera da catraca apagou'. Tanto p ∧ q quanto q ∧ p afirmam a coocorrência dos dois eventos.",
+  "desafio": {
+    "enunciado": "As colunas p e q já estão preenchidas. Calcule p ∧ q e q ∧ p clicando em cada célula vazia para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "As colunas de p ∧ q e q ∧ p são idênticas? Isso confirma a comutatividade da conjunção?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "p ∧ q", "q ∧ p"],
+      "linhas": [
+        ["V", "V", "V", "V"],
+        ["V", "F", "F", "F"],
+        ["F", "V", "F", "F"],
+        ["F", "F", "F", "F"]
+      ],
+      "respostaCorreta": ["V", "F", "F", "F"],
+      "colunasPreenchidas": 2
+    },
+    "respostaFinal": "Sim",
+    "opcoesPerguntaFinal": ["Sim", "Não"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Comutatividade confirmada.",
+      "mensagem": "Em lógica, ordem não muda o valor lógico — embora possa mudar o significado narrativo. Clara é coerente: tanto na primeira fala quanto na segunda, ela afirma a coocorrência de saída de Diego e blackout da câmera.",
+      "pistaLiberada": "O blackout da câmera coincidiu temporalmente com a saída de Diego para o café. Diego pode ter sido visto, OU pode ter sido o agente da queda da câmera."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Compare cada linha das duas colunas. Elas devem ter o mesmo valor sempre. Se p é V e q é V, p ∧ q = V e q ∧ p = V. Nada muda."
+    }
+  },
+  "pista": {
+    "id": "pista_10",
+    "categoria": "horarios",
+    "titulo": "Coincidência Temporal Diego × Câmera",
+    "descricao": "O blackout da câmera coincidiu temporalmente com a saída de Diego para o café. Diego pode ter sido visto, OU pode ter sido o agente da queda da câmera."
+  }
+}

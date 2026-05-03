@@ -1,0 +1,68 @@
+[
+  {
+    "id": "clara_viana",
+    "nome": "Clara Viana",
+    "cargo": "Recepcionista Noturna",
+    "local": "Recepção",
+    "cenario": "recepcao",
+    "suspeita": "baixa",
+    "descricao": "Atenta, cordial, observadora. Abalada, mas colaborativa.",
+    "motivacao": "Testemunha principal. Papel de observadora.",
+    "imagem": "/assets/personagens/clara_viana.png"
+  },
+  {
+    "id": "marcos_teles",
+    "nome": "Marcos Teles",
+    "cargo": "Analista de Segurança da Informação",
+    "local": "Sala de Monitoramento",
+    "cenario": "monitoramento",
+    "suspeita": "alta",
+    "descricao": "Reservado, técnico, detalhista, desconfiado. Acesso privilegiado aos sistemas.",
+    "motivacao": "Rivalidade profissional, venda de informação.",
+    "imagem": "/assets/personagens/marcos_teles.png"
+  },
+  {
+    "id": "helena_duarte",
+    "nome": "Helena Duarte",
+    "cargo": "Diretora de Operações",
+    "local": "Sala de Reuniões Executiva",
+    "cenario": "sala_reunioes",
+    "suspeita": "media",
+    "descricao": "Controladora, objetiva, racional. Tensa, mas mantendo postura firme.",
+    "motivacao": "Proteger a empresa de um escândalo.",
+    "imagem": "/assets/personagens/helena_duarte.png"
+  },
+  {
+    "id": "diego_sampaio",
+    "nome": "Diego Sampaio",
+    "cargo": "Técnico de Manutenção",
+    "local": "Corredor Técnico",
+    "cenario": "corredor_tecnico",
+    "suspeita": "alta",
+    "descricao": "Prático, comunicativo, improvisador. Conhece pontos cegos do prédio.",
+    "motivacao": "Dívidas pessoais.",
+    "imagem": "/assets/personagens/diego_sampaio.png"
+  },
+  {
+    "id": "renata_mota",
+    "nome": "Renata Mota",
+    "cargo": "Desenvolvedora Líder do Atlas",
+    "local": "Laboratório",
+    "cenario": "laboratorio",
+    "suspeita": "media",
+    "descricao": "Inteligente, impaciente, apaixonada pelo projeto. Conflito recente com a diretoria.",
+    "motivacao": "Medo de ter o trabalho apropriado pela empresa.",
+    "imagem": "/assets/personagens/renata_mota.png"
+  },
+  {
+    "id": "eduardo_leal",
+    "nome": "Eduardo Leal",
+    "cargo": "Consultor Externo",
+    "local": "Sala de Auditoria",
+    "cenario": "sala_auditoria",
+    "suspeita": "alta",
+    "descricao": "Elegante, persuasivo, calculista.",
+    "motivacao": "Interesse comercial no projeto, espionagem.",
+    "imagem": "/assets/personagens/eduardo_leal.png"
+  }
+]

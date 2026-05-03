@@ -1,0 +1,138 @@
+[
+  {
+    "id": "n01",
+    "tipo": "naracao",
+    "personagem": null,
+    "nomeExibido": null,
+    "texto": "Sexta-feira, 06h12. Chuva fina sobre o estacionamento da Nexum Data Solutions. O Detetive Lógico desce do carro com uma pasta sob o braço e atravessa a entrada principal, onde Helena Duarte, Diretora de Operações, o aguarda.",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n02",
+    "tipo": "dialogo",
+    "personagem": "helena_duarte",
+    "nomeExibido": "Helena Duarte",
+    "texto": "Detetive, obrigada por vir tão rápido. A apresentação aos investidores é em três dias. Se isso vazar, a empresa não sobrevive ao trimestre.",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n03",
+    "tipo": "dialogo",
+    "personagem": "detetive",
+    "nomeExibido": "Detetive Lógico",
+    "texto": "Boa noite, Sra. Duarte. Antes de qualquer coisa: quem estava no prédio entre as 22h e a meia-noite?",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n04",
+    "tipo": "dialogo",
+    "personagem": "helena_duarte",
+    "nomeExibido": "Helena Duarte",
+    "texto": "Seis pessoas. Eu, na sala de reuniões. Marcos Teles, no monitoramento. Renata Mota, no laboratório do Atlas. Diego Sampaio, em manutenção. Clara Viana, na recepção. E Eduardo Leal, consultor externo, na sala de auditoria.",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n05",
+    "tipo": "dialogo",
+    "personagem": "detetive",
+    "nomeExibido": "Detetive Lógico",
+    "texto": "Câmeras?",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n06",
+    "tipo": "dialogo",
+    "personagem": "helena_duarte",
+    "nomeExibido": "Helena Duarte",
+    "texto": "Há lacunas. Marcos diz que foi falha técnica. Não acredito em coincidências.",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n07",
+    "tipo": "dialogo",
+    "personagem": "detetive",
+    "nomeExibido": "Detetive Lógico",
+    "texto": "Ótimo. Eu também não. Vou ouvir cada um, separadamente. Vou anotar cada afirmação como se fosse uma proposição: verdadeira ou falsa, sem meio-termo. Quando duas afirmações se contradizem, alguém estará mentindo. E quem mente sobre o pequeno costuma mentir sobre o grande.",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n08",
+    "tipo": "naracao",
+    "personagem": null,
+    "nomeExibido": null,
+    "texto": "O Detetive abre sua pasta. Dentro, um caderno em branco com a inscrição 'Tabelas de Verdade — Caderno de Campo'. Ele toma um gole de café e segue pelo corredor.",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n09",
+    "tipo": "dialogo",
+    "personagem": "detetive",
+    "nomeExibido": "Detetive Lógico",
+    "texto": "Vamos começar pelo monitoramento. Onde alguém poderia desligar o alarme sem ser notado, é onde a verdade começa a desmoronar. Mas antes preciso passar pela Recepção.",
+    "cenario": "monitoramento"
+  },
+  {
+    "id": "n10",
+    "tipo": "titulo",
+    "personagem": null,
+    "nomeExibido": null,
+    "texto": "Os Suspeitos",
+    "cenario": null
+  },
+  {
+    "id": "n11",
+    "tipo": "ficha_suspeito",
+    "personagem": "helena_duarte",
+    "nomeExibido": "Helena Duarte",
+    "texto": "Diretora de Operações — Sala de Reuniões Executiva. Controladora, objetiva, racional. Tensa, mas mantendo postura firme. Possível motivação: proteger a empresa de um escândalo.",
+    "cenario": "sala_reunioes"
+  },
+  {
+    "id": "n12",
+    "tipo": "ficha_suspeito",
+    "personagem": "marcos_teles",
+    "nomeExibido": "Marcos Teles",
+    "texto": "Analista de Segurança da Informação — Monitoramento. Reservado, técnico, detalhista, desconfiado. Acesso privilegiado aos sistemas. Possível motivação: rivalidade profissional, venda de informação.",
+    "cenario": "monitoramento"
+  },
+  {
+    "id": "n13",
+    "tipo": "ficha_suspeito",
+    "personagem": "renata_mota",
+    "nomeExibido": "Renata Mota",
+    "texto": "Desenvolvedora Líder do Atlas — Laboratório. Inteligente, impaciente, apaixonada pelo projeto. Conflito recente com a diretoria. Possível motivação: medo de ter o trabalho apropriado pela empresa.",
+    "cenario": "laboratorio"
+  },
+  {
+    "id": "n14",
+    "tipo": "ficha_suspeito",
+    "personagem": "diego_sampaio",
+    "nomeExibido": "Diego Sampaio",
+    "texto": "Técnico de Manutenção — Corredor Técnico. Prático, comunicativo, improvisador. Conhece pontos cegos do prédio. Possível motivação: dívidas pessoais.",
+    "cenario": "corredor_tecnico"
+  },
+  {
+    "id": "n15",
+    "tipo": "ficha_suspeito",
+    "personagem": "clara_viana",
+    "nomeExibido": "Clara Viana",
+    "texto": "Recepcionista Noturna — Recepção. Atenta, cordial, observadora. Abalada, mas colaborativa. Suspeita: baixa. Principal papel de testemunha.",
+    "cenario": "recepcao"
+  },
+  {
+    "id": "n16",
+    "tipo": "ficha_suspeito",
+    "personagem": "eduardo_leal",
+    "nomeExibido": "Eduardo Leal",
+    "texto": "Consultor Externo — Sala de Auditoria. Elegante, persuasivo, calculista. Possível motivação: interesse comercial no projeto, espionagem.",
+    "cenario": "sala_auditoria"
+  },
+  {
+    "id": "n17",
+    "tipo": "naracao",
+    "personagem": null,
+    "nomeExibido": null,
+    "texto": "Seis suspeitos. Treze proposições a verificar. Uma única solução consistente. A investigação começa agora.",
+    "cenario": null
+  }
+]

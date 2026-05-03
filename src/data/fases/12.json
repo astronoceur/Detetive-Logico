@@ -1,0 +1,83 @@
+{
+  "id": 12,
+  "titulo": "Distributividade",
+  "conceito": {
+    "titulo": "Distributividade e Elementos Neutros",
+    "texto": "Distributividade: ∧ se distribui sobre ∨ e vice-versa. p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r) — análoga à distributividade da multiplicação sobre a soma. Elementos neutros: para a conjunção, V é neutro (p ∧ V ≡ p); para a disjunção, F é neutro (p ∨ F ≡ p). Adicionar a verdade incondicional a uma conjunção, ou a falsidade incondicional a uma disjunção, não muda nada.",
+    "pilarPC": "Algoritmos e Abstração",
+    "pilarDescricao": "manipular fórmulas como objetos algébricos, simplificando-as antes de avaliar"
+  },
+  "personagem": "renata_mota",
+  "cenario": "laboratorio",
+  "narracaoEntrada": "Renata agora está sentada, encarando o quadro branco com diagramas. Os ombros caídos. Ela parece ter passado por um interrogatório longo. Olha o detetive com cansaço.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Renata Mota",
+        "fala": "Detetive, eu acessei o laboratório, sim. Mas só para revisar uma falha do código, não para roubar."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "A senhora afirmou: 'eu acessei o laboratório E (cuidei do código OU corrigi o protótipo)'. Pela distributividade, isso equivale a: 'acessei o laboratório E cuidei do código' OU 'acessei o laboratório E corrigi o protótipo'."
+      },
+      {
+        "personagem": "Renata Mota",
+        "fala": "Sim. Uma das duas. Ou as duas."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "E quando a senhora diz 'acessei o laboratório E é verdade que estava nervosa', a parte 'é verdade que estava nervosa' não acrescenta nada à conjunção, porque V é elemento neutro do ∧."
+      },
+      {
+        "personagem": "Renata Mota",
+        "fala": "Compreendo. Mas o que importa é o quê eu fiz lá dentro."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Exato. A álgebra das suas afirmações reduz tudo a um ponto: a senhora estava no laboratório quando o Atlas desapareceu."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Renata acessou o laboratório'. q = 'Renata revisou o código'. r = 'Renata corrigiu o protótipo'. Afirmação: p ∧ (q ∨ r). Pela distributividade: (p ∧ q) ∨ (p ∧ r). Para o elemento neutro: p ∧ V ≡ p — a frase 'estava nervosa' (V) não muda nada.",
+  "desafio": {
+    "enunciado": "As sete primeiras colunas já estão preenchidas. Calcule apenas a última coluna — (p ∧ q) ∨ (p ∧ r) — clicando em cada célula vazia para alternar entre V e F. Após preencher, responda à pergunta final.",
+    "pergunta": "As colunas p ∧ (q ∨ r) e (p ∧ q) ∨ (p ∧ r) são iguais em todas as linhas? Isso confirma a distributividade?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "r", "q ∨ r", "p ∧ (q ∨ r)", "p ∧ q", "p ∧ r", "(p ∧ q) ∨ (p ∧ r)"],
+      "linhas": [
+        ["V", "V", "V", "V", "V", "V", "V", "V"],
+        ["V", "V", "F", "V", "V", "V", "F", "V"],
+        ["V", "F", "V", "V", "V", "F", "V", "V"],
+        ["V", "F", "F", "F", "F", "F", "F", "F"],
+        ["F", "V", "V", "V", "F", "F", "F", "F"],
+        ["F", "V", "F", "V", "F", "F", "F", "F"],
+        ["F", "F", "V", "V", "F", "F", "F", "F"],
+        ["F", "F", "F", "F", "F", "F", "F", "F"]
+      ],
+      "respostaCorreta": ["V", "V", "V", "F", "F", "F", "F", "F"],
+      "colunasPreenchidas": 7
+    },
+    "respostaFinal": "Sim",
+    "opcoesPerguntaFinal": ["Sim", "Não"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Excelente análise algébrica.",
+      "mensagem": "A distributividade permite reescrever depoimentos compostos em alternativas atomizadas. Renata acaba admitindo que esteve no laboratório durante o intervalo crítico — o que está em conflito com seu álibi inicial do banheiro.",
+      "pistaLiberada": "Renata estava no laboratório no momento exato do roubo. Ela tem acesso, conhecimento e oportunidade. Sua reação emocional ('estava nervosa' = V) é elemento neutro: não acrescenta nem retira ao caso lógico."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Para cada linha, tome o valor de p ∧ q e o valor de p ∧ r e calcule a disjunção dos dois. Se ao menos um for V, a coluna final é V. Se ambos forem F, a coluna final é F."
+    }
+  },
+  "pista": {
+    "id": "pista_12",
+    "categoria": "contradicoes",
+    "titulo": "Renata Confessa Acesso ao Laboratório",
+    "descricao": "Renata estava no laboratório no momento exato do roubo. Ela tem acesso, conhecimento e oportunidade. Sua reação emocional é elemento neutro: não acrescenta nem retira ao caso lógico."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": 13,
+  "titulo": "Leis de De Morgan",
+  "conceito": {
+    "titulo": "Leis de De Morgan",
+    "texto": "As Leis de De Morgan permitem 'distribuir' a negação sobre conjunções e disjunções, invertendo o conectivo: ¬(p ∧ q) ≡ ¬p ∨ ¬q e ¬(p ∨ q) ≡ ¬p ∧ ¬q. Em uma investigação, isso é decisivo: negar uma afirmação composta exige conhecer a estrutura da afirmação. Negar 'foi A e B' não é 'não foi A e não foi B' — é 'não foi A OU não foi B'.",
+    "pilarPC": "Reconhecimento de Padrões",
+    "pilarDescricao": "identificar que negações compostas seguem uma regra estrutural fixa"
+  },
+  "personagem": "eduardo_leal",
+  "cenario": "sala_auditoria",
+  "narracaoEntrada": "Eduardo guarda o notebook na pasta. Pela primeira vez, sua expressão é menos calculada — mais cautelosa. Ele encara o detetive de pé.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Detetive, sustento que NÃO é verdade que eu tenha entrado no laboratório E pego o Módulo Atlas. Estas duas coisas, juntas, eu nego."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Pelas Leis de De Morgan, 'não (A e B)' equivale a 'não A ou não B'. Ou seja, ou o senhor não entrou, ou o senhor não pegou. Ou ambos. Não é uma negação tão forte quanto soa."
+      },
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Hmm."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Para negar de fato a conjunção 'entrou E pegou', basta que apenas uma das duas seja falsa. O senhor pode ter entrado e não pego. Ou não entrado e não pego."
+      },
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Compreendo o tecnicismo. Mas eu mantenho que não fui o autor do roubo."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Anotado. E como vimos, o blackout do crachá impede confirmar fisicamente sua entrada — a única evidência forte contra o senhor ainda é circunstancial."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Eduardo entrou no laboratório'. q = 'Eduardo pegou o Atlas'. Eduardo afirma ¬(p ∧ q). Por De Morgan: ¬(p ∧ q) ≡ ¬p ∨ ¬q. As duas formas têm exatamente a mesma tabela-verdade.",
+  "desafio": {
+    "enunciado": "Monte a tabela-verdade completa clicando em cada célula para alternar entre V e F. Compare as colunas ¬(p ∧ q) e ¬p ∨ ¬q — elas devem coincidir, confirmando De Morgan.",
+    "pergunta": "As colunas ¬(p ∧ q) e ¬p ∨ ¬q são idênticas? Isso confirma a Lei de De Morgan?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "q", "p ∧ q", "¬(p ∧ q)", "¬p", "¬q", "¬p ∨ ¬q"],
+      "linhas": [
+        ["V", "V", "V", "F", "F", "F", "F"],
+        ["V", "F", "F", "V", "F", "V", "V"],
+        ["F", "V", "F", "V", "V", "F", "V"],
+        ["F", "F", "F", "V", "V", "V", "V"]
+      ],
+      "respostaCorreta": ["F", "V", "V", "V"]
+    },
+    "respostaFinal": "Sim",
+    "opcoesPerguntaFinal": ["Sim", "Não"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "De Morgan confirmado.",
+      "mensagem": "A negação distribui invertendo o conectivo. Eduardo usou uma negação composta acreditando que negaria as duas coisas. Logicamente, ele negou apenas a conjunção — ou seja, basta uma das duas ser falsa.",
+      "pistaLiberada": "A defesa de Eduardo é logicamente fraca. Ele não negou ter entrado E não negou ter pegado isoladamente: apenas negou a conjunção. Mas ele permanece cauteloso, sem confessar nada."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Faça a tabela com paciência. Calcule p ∧ q, depois ¬(p ∧ q). Em separado, ¬p, ¬q e ¬p ∨ ¬q. A negação de 'A e B' não é 'não A e não B' — é 'não A OU não B'."
+    }
+  },
+  "pista": {
+    "id": "pista_13",
+    "categoria": "contradicoes",
+    "titulo": "Negação Fraca de Eduardo",
+    "descricao": "A defesa de Eduardo é logicamente fraca. Ele não negou ter entrado E não negou ter pegado isoladamente: apenas negou a conjunção. Mas ele permanece cauteloso, sem confessar nada."
+  }
+}

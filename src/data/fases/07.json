@@ -1,0 +1,76 @@
+{
+  "id": 7,
+  "titulo": "Negação",
+  "conceito": {
+    "titulo": "Negação (¬)",
+    "texto": "A negação ¬p inverte o valor lógico de p. Negar uma proposição significa afirmar exatamente o oposto. Em uma investigação, identificar negações implícitas (em frases como 'não foi assim', 'jamais', 'em nenhuma hipótese') é fundamental para detectar contradições.",
+    "pilarPC": "Decomposição e Reconhecimento de Padrões",
+    "pilarDescricao": "extrair de frases negativas a proposição-base para comparar com outras versões"
+  },
+  "personagem": "marcos_teles",
+  "cenario": "monitoramento",
+  "narracaoEntrada": "De volta à sala fria do monitoramento. As anotações técnicas na parede agora têm um post-it amarelo novo, escrito a caneta vermelha: 'verificar log servidor aux'. Marcos parece mais cansado do que antes.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Marcos, a Renata afirma que estava no banheiro às 22h38. Mas o registro biométrico do laboratório diz o contrário."
+      },
+      {
+        "personagem": "Marcos Teles",
+        "fala": "Eu não falsifiquei log nenhum. Posso garantir."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Você anteriormente disse 'eu estava aqui ou no corredor'. Renata afirma 'eu não estava no laboratório'. Se a negação dela for falsa, ela estava sim no laboratório."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Marcos Teles",
+        "fala": "Se ¬p significa 'p é falso', e se a afirmação 'eu não estava no laboratório' é falsa, então ela estava no laboratório. É só inverter."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Exatamente. E o seu próprio depoimento, 'não desativei o alarme'? Se essa negação for falsa, então..."
+      },
+      {
+        "personagem": "Marcos Teles",
+        "fala": "...então eu desativei. Mas não desativei. Cheque os logs do servidor auxiliar — eles mostram desativação automática por queda de tensão, não comando manual."
+      }
+    ]
+  },
+  "traducaoLogica": "r = 'Renata estava no laboratório às 22h38'. A afirmação de Renata é ¬r. Se ¬r é F, então r é V. s = 'Marcos desativou o alarme'. A afirmação de Marcos é ¬s. Se os logs confirmam queda automática, então ¬s = V, ou seja, s = F.",
+  "desafio": {
+    "enunciado": "Monte a tabela-verdade da negação (¬p) clicando em cada célula para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "Renata afirmou ¬r ('eu não estava no laboratório'). Sabendo, pelo registro biométrico, que ¬r é falsa, qual o valor de r?",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "¬p"],
+      "linhas": [
+        ["V", "F"],
+        ["F", "V"]
+      ],
+      "respostaCorreta": ["F", "V"]
+    },
+    "respostaFinal": "V",
+    "opcoesPerguntaFinal": ["V", "F"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Você dominou a inversão.",
+      "mensagem": "Negar a negação retorna ao original. Esta é a base do princípio da dupla negação: ¬¬p ≡ p.",
+      "pistaLiberada": "Renata mentiu sobre não estar no laboratório. Combinado com o registro biométrico, ela esteve lá em uma janela crítica."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "¬p é simplesmente o oposto de p. Se ¬p é F, então p é V. 'Eu NÃO estava lá' é falso → 'eu estava lá' é verdadeiro."
+    }
+  },
+  "pista": {
+    "id": "pista_07",
+    "categoria": "contradicoes",
+    "titulo": "Negação Derrubada de Renata",
+    "descricao": "Renata mentiu sobre não estar no laboratório. Combinado com o registro biométrico, ela esteve lá em uma janela crítica."
+  }
+}

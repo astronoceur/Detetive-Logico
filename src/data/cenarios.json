@@ -1,0 +1,44 @@
+[
+  {
+    "id": "recepcao",
+    "nome": "Recepção",
+    "imagem": "/assets/cenarios/recepcao.png",
+    "personagem": "clara_viana",
+    "fases": [1, 10]
+  },
+  {
+    "id": "monitoramento",
+    "nome": "Sala de Monitoramento",
+    "imagem": "/assets/cenarios/monitoramento.png",
+    "personagem": "marcos_teles",
+    "fases": [2, 7]
+  },
+  {
+    "id": "sala_reunioes",
+    "nome": "Sala de Reuniões",
+    "imagem": "/assets/cenarios/sala_reunioes.png",
+    "personagem": "helena_duarte",
+    "fases": [3, 9]
+  },
+  {
+    "id": "corredor_tecnico",
+    "nome": "Corredor Técnico",
+    "imagem": "/assets/cenarios/corredor_tecnico.png",
+    "personagem": "diego_sampaio",
+    "fases": [4, 11]
+  },
+  {
+    "id": "sala_auditoria",
+    "nome": "Sala de Auditoria",
+    "imagem": "/assets/cenarios/sala_auditoria.png",
+    "personagem": "eduardo_leal",
+    "fases": [5, 8, 13]
+  },
+  {
+    "id": "laboratorio",
+    "nome": "Laboratório",
+    "imagem": "/assets/cenarios/laboratorio.png",
+    "personagem": "renata_mota",
+    "fases": [6, 12]
+  }
+]

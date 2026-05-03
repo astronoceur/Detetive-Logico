@@ -1,0 +1,89 @@
+{
+  "id": 2,
+  "titulo": "Conectivos Lógicos",
+  "conceito": {
+    "titulo": "Conectivos e Valores Lógicos",
+    "texto": "Conectivos são operadores que combinam proposições simples em proposições compostas. Os principais são: ∧ (conjunção/'e'), ∨ (disjunção/'ou'), → (condicional/'se...então'), ↔ (bicondicional/'se e somente se') e ¬ (negação/'não'). Cada proposição assume exatamente um dos dois valores lógicos: V ou F.",
+    "pilarPC": "Abstração",
+    "pilarDescricao": "substituir frases inteiras por símbolos (p, q, r) e operar com regras formais"
+  },
+  "personagem": "marcos_teles",
+  "cenario": "monitoramento",
+  "narracaoEntrada": "A sala de monitoramento está fria. Quatro telas mostram corredores vazios. Uma delas pisca, mostrando uma faixa preta de aproximadamente dois minutos no histórico. Marcos Teles está de braços cruzados, observando os logs no terminal.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Marcos Teles",
+        "fala": "Já sei o que vai me perguntar. A lacuna nas câmeras. Foi falha do servidor auxiliar, não invasão."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Você desativou o alarme em algum momento?"
+      },
+      {
+        "personagem": "Marcos Teles",
+        "fala": "Não. O alarme caiu sozinho às 22h40 e voltou às 22h44. Reiniciei o sistema e voltou ao normal."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Você estava sozinho na sala nesse momento?"
+      },
+      {
+        "personagem": "Marcos Teles",
+        "fala": "Estava. E eu estava aqui ou no corredor técnico — passei por lá rapidinho buscar um cabo. Mas não simultaneamente, óbvio."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Diego diz que viu alguém perto do painel elétrico às 22h40."
+      },
+      {
+        "personagem": "Marcos Teles",
+        "fala": "Pode ter sido eu, pegando o cabo. Ou pode ter sido o próprio Diego. Não dá para garantir."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Então você admite ter saído da sala de monitoramento durante o blackout?"
+      },
+      {
+        "personagem": "Marcos Teles",
+        "fala": "Saí, sim. Mas é uma de duas coisas: ou eu estava no monitoramento ou eu estava no corredor — nunca nos dois lugares ao mesmo tempo."
+      }
+    ]
+  },
+  "traducaoLogica": "Definimos: p = 'Marcos estava na sala de monitoramento às 22h40'; q = 'Marcos estava no corredor técnico às 22h40'. A fala de Marcos pode ser representada como: (p ∨ q) ∧ ¬(p ∧ q) — exatamente a 'disjunção exclusiva', modelada aqui como uma combinação de ∨, ∧ e ¬.",
+  "desafio": {
+    "enunciado": "Na frase 'eu estava aqui ou no corredor, mas nunca nos dois ao mesmo tempo', identifique quais conectivos lógicos estão presentes.",
+    "pergunta": "A expressão final equivalente à fala de Marcos é (p ∨ q) ∧ ¬(p ∧ q). Quantos tipos de conectivos diferentes ela contém?",
+    "tipo": "tabela_conectivos",
+    "estrutura": {
+      "colunas": ["Trecho", "Conectivo lógico"],
+      "linhas": [
+        ["'aqui ou no corredor'", "Disjunção (∨)"],
+        ["'mas nunca nos dois'", "Negação (¬) sobre conjunção (∧)"],
+        ["'nos dois ao mesmo tempo'", "Conjunção (∧)"]
+      ],
+      "respostaCorreta": ["Disjunção (∨)", "Negação (¬) sobre conjunção (∧)", "Conjunção (∧)"]
+    },
+    "respostaFinal": 3,
+    "numOpcoes": 4
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Boa, detetive.",
+      "mensagem": "Marcos usou três operadores lógicos diferentes em uma única frase. Essa estrutura é o que chamamos formalmente de OU exclusivo — uma alternativa, mas não as duas.",
+      "pistaLiberada": "Marcos confirma que saiu da sala de monitoramento entre 22h40 e 22h44. Logo, durante o blackout, o monitoramento esteve sem operador."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Releia a frase devagar. 'Ou' é disjunção. 'E' (ou 'nos dois') é conjunção. 'Nunca' / 'não' é negação. Contar conectivos não é contar palavras — é contar tipos diferentes de operadores."
+    }
+  },
+  "pista": {
+    "id": "pista_02",
+    "categoria": "acessos",
+    "titulo": "Monitoramento Sem Operador",
+    "descricao": "Marcos confirma que saiu da sala de monitoramento entre 22h40 e 22h44. Logo, durante o blackout, o monitoramento esteve sem operador."
+  }
+}

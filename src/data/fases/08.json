@@ -1,0 +1,80 @@
+{
+  "id": 8,
+  "titulo": "Tautologia",
+  "conceito": {
+    "titulo": "Tautologia",
+    "texto": "Uma proposição composta é uma tautologia quando seu valor é V para todas as combinações possíveis dos valores das proposições simples. O exemplo clássico é p ∨ ¬p (princípio do terceiro excluído): em qualquer cenário, ou p é verdadeira, ou sua negação é. Tautologias são afirmações sempre verdadeiras — e, por isso, podem ser usadas para 'parecer profundas' sem afirmar nada de informativo.",
+    "pilarPC": "Reconhecimento de Padrões",
+    "pilarDescricao": "identificar afirmações vazias que não restringem o espaço de possibilidades"
+  },
+  "personagem": "eduardo_leal",
+  "cenario": "sala_auditoria",
+  "narracaoEntrada": "Eduardo agora segura uma xícara de café. A pasta executiva foi organizada. Sua postura permanece estudada, mas há um leve cansaço sob os olhos.",
+  "dialogos": {
+    "primeiro": [
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Detetive, deixe-me ser claro: ou eu sou inocente, ou eu sou culpado. Não há terceira opção."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Sr. Leal, isso não me ajuda em nada."
+      },
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Como assim? É uma verdade absoluta."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "É uma tautologia. Sempre verdadeira, qualquer que seja a realidade. Não diz nada sobre o caso."
+      }
+    ],
+    "segundo": [
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Bom, então deixe-me reformular. Se eu não roubei o Atlas, então não há registros do meu acesso. E não há registros."
+      },
+      {
+        "personagem": "Detetive Lógico",
+        "fala": "Já vimos que essa condicional perde força durante o blackout. Não me venha com tautologias agora — preciso de afirmações com conteúdo informativo, que eu possa testar."
+      },
+      {
+        "personagem": "Eduardo Leal",
+        "fala": "Entendido."
+      }
+    ]
+  },
+  "traducaoLogica": "p = 'Eduardo é inocente'. A afirmação 'p ∨ ¬p' é uma tautologia clássica. Sua tabela-verdade é constante em V, independentemente do valor de p. Logo, é informativamente vazia.",
+  "desafio": {
+    "enunciado": "Monte a tabela-verdade de p ∨ ¬p clicando em cada célula para alternar entre V e F. Após preencher toda a tabela, responda à pergunta final.",
+    "pergunta": "A expressão p ∨ ¬p é uma tautologia? Justifique pela tabela-verdade.",
+    "tipo": "tabela_verdade_interativa",
+    "estrutura": {
+      "colunas": ["p", "¬p", "p ∨ ¬p"],
+      "linhas": [
+        ["V", "F", "V"],
+        ["F", "V", "V"]
+      ],
+      "respostaCorreta": ["V", "V"]
+    },
+    "respostaFinal": "Sim",
+    "opcoesPerguntaFinal": ["Sim", "Não"]
+  },
+  "feedback": {
+    "acerto": {
+      "titulo": "Você reconheceu o truque.",
+      "mensagem": "Uma tautologia sempre soa verdadeira, mas não nos dá informação útil. Em investigações, suspeitos cultos costumam usar tautologias para parecer cooperativos sem revelar nada.",
+      "pistaLiberada": "Eduardo evita afirmações falsificáveis. Ele tem consciência dos riscos legais e está se protegendo verbalmente — comportamento típico de quem teme que algo concreto seja descoberto."
+    },
+    "erro": {
+      "titulo": "Reveja com calma.",
+      "dica": "Construa a tabela linha a linha. Para cada valor de p, calcule ¬p e depois p ∨ ¬p. Se a coluna final tem apenas V, é tautologia."
+    }
+  },
+  "pista": {
+    "id": "pista_08",
+    "categoria": "contradicoes",
+    "titulo": "Linguagem Evasiva de Eduardo",
+    "descricao": "Eduardo evita afirmações falsificáveis. Ele tem consciência dos riscos legais e está se protegendo verbalmente — comportamento típico de quem teme que algo concreto seja descoberto."
+  }
+}
